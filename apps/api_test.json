@@ -34,7 +34,7 @@
             "data_source": {
               "kind": "GraphQLDataSource",
               "data_source_config": {          
-                "url": "http://gql:3000/",
+                "url": "http://172.31.12.80",
                 "method": "POST"
               }
             }
@@ -47,7 +47,7 @@
       },
     "proxy": {
         "listen_path": "/api",
-        "target_url": "http://gql:3000",
+        "target_url": "http://172.31.12.80",
         "strip_listen_path": true
     },
     "enable_batch_request_support": true,
