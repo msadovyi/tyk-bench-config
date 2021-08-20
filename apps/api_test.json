@@ -22,7 +22,7 @@
     "graphql": {
         "enabled": true,
         "execution_mode": "executionEngine",
-        "schema": "type Query { authors: [Author]! }  type Book {  title: String! author: Author! } type Author { id: Int! fullName: String! books: [Book]!}",
+        "schema": "type Query { authors: [Author]! author: Author }  type Book {  title: String! author: Author! } type Author { id: Int! fullName: String! books: [Book]!}",
         "type_field_configurations": [
           {
             "type_name": "Query",
@@ -30,6 +30,21 @@
             "mapping": {
               "disabled": false,
               "path": "authors"
+            },
+            "data_source": {
+              "kind": "GraphQLDataSource",
+              "data_source_config": {          
+                "url": "http://172.31.12.80",
+                "method": "POST"
+              }
+            }
+          },
+          {
+            "type_name": "Query",
+            "field_name": "author",
+            "mapping": {
+              "disabled": false,
+              "path": "author"
             },
             "data_source": {
               "kind": "GraphQLDataSource",
