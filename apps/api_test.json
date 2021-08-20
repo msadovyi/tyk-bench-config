@@ -21,7 +21,7 @@
     },
     "graphql": {
         "enabled": true,
-        "execution_mode": "proxyOnly",
+        "execution_mode": "executionEngine",
         "schema": "type Query { authors: [Author]! }  type Book {  title: String! author: Author! } type Author { id: Int! fullName: String! books: [Book]!}",
         "type_field_configurations": [
           {
